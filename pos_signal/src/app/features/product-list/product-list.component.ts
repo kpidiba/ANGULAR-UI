@@ -12,7 +12,7 @@ import { Component, OnInit, inject, signal } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   remove(arg0: number) {
-    throw new Error('Method not implemented.');
+    this.service.RemoveProduct(arg0);
   }
   edit(arg0: number) {
     throw new Error('Method not implemented.');

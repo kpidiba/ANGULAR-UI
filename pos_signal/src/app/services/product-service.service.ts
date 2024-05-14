@@ -6,6 +6,13 @@ import { SaleProduct } from '../models/SaleProduct';
 })
 export class ProductService {
   productlist = signal<SaleProduct[]>([]);
+  productitem = signal<SaleProduct>({
+    saleNumber: 0,
+    code: '',
+    price: 0,
+    quantity: 0,
+    total: 0
+  });
   constructor() { }
 
   /**
@@ -17,7 +24,13 @@ export class ProductService {
     this.productlist.update(previous => [...previous, product]);
   }
 
-  
+  RemoveProduct(id: number){
+    this.productlist.update(previous => previous.filter(product => product.saleNumber !== id));
+  }
+
+  GetProductByCode(code: string) {
+    return this.productitem.set( this.productlist().find(product => product.code === code) as SaleProduct);
+  }
 
   totalquantity = computed(() => this.productlist().length)
   summarytotal = computed(() => this.productlist().reduce((a, b) => a + b.total, 0))
