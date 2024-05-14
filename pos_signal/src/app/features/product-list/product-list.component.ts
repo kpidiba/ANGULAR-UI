@@ -13,6 +13,10 @@ import { Component, OnInit, inject, signal } from '@angular/core';
 export class ProductListComponent implements OnInit {
 
   public service = inject(ProductServiceService);
+
+  productList = signal<SaleProduct[]>([]);
+
+
   constructor() { }
 
   ngOnInit() {
