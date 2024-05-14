@@ -20,8 +20,8 @@
               <td>{{ product.quantity }}</td>
               <td>{{ product.total }}</td>
               <td>
-                <a class="btn btn-info">Modifier</a>
-                <a class="btn btn-danger">Supprimer</a>
+                <a class="btn btn-info" (click)="edit(product.saleNumber)">Modifier</a>
+                <a class="btn btn-danger" (click)="remove(product.saleNumber)">Supprimer</a>
               </td>
             </tr>
           </tbody>

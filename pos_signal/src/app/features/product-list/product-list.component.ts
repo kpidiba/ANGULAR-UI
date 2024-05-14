@@ -7,10 +7,16 @@ import { Component, OnInit, inject, signal } from '@angular/core';
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
-  imports:[NgFor],
+  imports: [NgFor],
   standalone: true
 })
 export class ProductListComponent implements OnInit {
+  remove(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
+  edit(arg0: number) {
+    throw new Error('Method not implemented.');
+  }
 
   public service = inject(ProductService);
 

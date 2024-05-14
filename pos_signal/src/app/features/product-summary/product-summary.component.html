@@ -1,13 +1,16 @@
 <div class="card">
   <div class="card-body">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-4 offset-lg-8">
         <table class="table table-bordered">
           <tbody>
             <tr>
               <td>Quantite total</td>
               <td>{{ service.totalquantity() }}</td>
-              
+            </tr>
+            <tr>
+              <td>Quantite total</td>
+              <td>{{ service.summarytotal() }}</td>
             </tr>
           </tbody>
         </table>

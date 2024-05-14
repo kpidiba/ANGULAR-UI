@@ -17,7 +17,10 @@ export class ProductService {
     this.productlist.update(previous => [...previous, product]);
   }
 
-  totalquantity= computed(() => this.productlist().length)
+  
+
+  totalquantity = computed(() => this.productlist().length)
+  summarytotal = computed(() => this.productlist().reduce((a, b) => a + b.total, 0))
 
 }
 

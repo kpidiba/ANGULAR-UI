@@ -17,7 +17,6 @@ export class ProductAddComponent implements OnInit {
   productform = this.builder.group({
     saleNumber: this.builder.control<number>(1),
     code: this.builder.control(''),
-    name: this.builder.control(''),
     quantity: this.builder.control(1),
     price: this.builder.control(1),
     total: this.builder.control(0)
@@ -44,6 +43,7 @@ export class ProductAddComponent implements OnInit {
       total: total
     };
     this.service.AddProduct(product);
+    this.productform.reset();
   }
 
 }
