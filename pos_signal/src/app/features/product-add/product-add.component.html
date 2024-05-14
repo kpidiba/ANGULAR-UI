@@ -1,32 +1,36 @@
-<div class="card">
+<form class="card"  [formGroup]="productform" (ngSubmit)="onSubmit()">
   <div class="card-body">
     <div class="row">
       <div class="col-lg-4">
         <div class="form-group">
           <label for="">AJOUTER UN PRODUIT</label>
-          <select class="form-control">
+          <select class="form-control" formControlName="code">
             <option value="">Select Option</option>
             <option value="p001">Rice 25kg</option>
             <option value="p002">Sugar</option>
             <option value="p003">Cocnut Oil 1L</option>
           </select>
         </div>
-        <div class="col-lg-2">
-          <div class="form-group">
-            <label>Qte</label>
-          </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="form-group"   >
+          <label>Qte</label>
+          <input type="text" class="form-control" formControlName="quantity" />
         </div>
-        <div class="col-lg-2">
-          <div class="form-group">
-            <label>Price</label>
-          </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="form-group">
+          <label>Price</label>
+          <input type="text" class="form-control" formControlName="price" />
         </div>
-        <div class="col-lg-2">
-          <div class="form-group">
-            <a class="btn btn-primary" href="">Add Product</a>
-          </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="form-group">
+          <br>
+          <button class="btn btn-primary" href="">Add Product</button>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>

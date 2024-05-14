@@ -1,8 +1,7 @@
 
 export interface SaleProduct {
   saleNumber: number;
-  code: number;
-  name: string;
+  code: string;
   price: number;
   quantity: number;
   total: number;

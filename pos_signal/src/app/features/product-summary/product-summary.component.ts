@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ProductService } from './../../services/product-service.service';
+import { Component, OnInit, inject } from '@angular/core';
 
 @Component({
   selector: 'app-product-summary',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   standalone:true
 })
 export class ProductSummaryComponent implements OnInit {
-
+  public service = inject(ProductService);
   constructor() { }
 
   ngOnInit() {

@@ -7,14 +7,13 @@
             <tr>
               <th>No Vente</th>
               <th>Code</th>
-              <th>Nom</th>
               <th>Prix</th>
               <th>Quantite</th>
               <th>Total</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let product of service.productList()">
+            <tr *ngFor="let product of service.productlist()">
               <td>{{ product.saleNumber }}</td>
               <td>{{ product.code }}</td>
               <td>{{ product.price }}</td>

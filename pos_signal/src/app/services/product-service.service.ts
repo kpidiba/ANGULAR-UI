@@ -1,10 +1,10 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, computed, signal } from '@angular/core';
 import { SaleProduct } from '../models/SaleProduct';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductServiceService {
+export class ProductService {
   productlist = signal<SaleProduct[]>([]);
   constructor() { }
 
@@ -12,10 +12,12 @@ export class ProductServiceService {
    * Add a new product to the list
    * @param _product the product to be added
    */
-  AddProduct(_product: SaleProduct) {
+  AddProduct(product: SaleProduct) {
     // Update the product list by appending the new product to the previous list
-    this.productlist.update(previous => [...previous, _product]);
+    this.productlist.update(previous => [...previous, product]);
   }
+
+  totalquantity= computed(() => this.productlist().length)
 
 }
 
