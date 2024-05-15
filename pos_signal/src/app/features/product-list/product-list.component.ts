@@ -14,9 +14,6 @@ export class ProductListComponent implements OnInit {
   remove(arg0: number) {
     this.service.RemoveProduct(arg0);
   }
-  edit(arg0: number) {
-    throw new Error('Method not implemented.');
-  }
 
   public service = inject(ProductService);
 
