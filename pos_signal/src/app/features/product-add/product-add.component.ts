@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductService } from '../../services/product-service.service';
+import { ProductService } from '../../services/product-service';
 import { SaleProduct } from '../../models/SaleProduct';
 
 @Component({

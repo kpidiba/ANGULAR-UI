@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { ProductService } from '../../services/product-service.service';
+import { ProductService } from '../../services/product-service';
 import { SaleProduct } from './../../models/SaleProduct';
 import { Component, OnInit, inject, signal } from '@angular/core';
 
